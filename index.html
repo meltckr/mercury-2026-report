@@ -12,7 +12,7 @@
 
   <!-- Open Graph / iMessage / Facebook -->
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://meltckr.github.io/mercury-2026-report/">
+  <meta property="og:url" content="">
   <meta property="og:title" content="Phoenix Mercury 2026 Season Analysis">
   <meta property="og:description" content="Executive report covering the Mercury's 2–7 start: defensive collapse, key injuries, roster losses, coaching identity, and organizational context.">
   <meta property="og:image" content="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/bf4e496a-bb56-4cc3-9a71-5a6bd6ae9a22.png">
@@ -125,50 +125,57 @@
   .stat-card-sub{font-size:var(--text-xs);color:var(--color-text-faint);margin-top:2px;}
 
   .quote-block{background:var(--color-surface-offset);border-left:3px solid var(--color-accent);border-radius:0 var(--radius-md) var(--radius-md) 0;padding:var(--space-4) var(--space-5);margin:var(--space-4) 0;}
-  .quote-block blockquote{font-family:var(--font-display);font-size:var(--text-lg);color:var(--color-text);line-height:1.5;font-style:italic;margin-bottom:var(--space-2);}
-  .quote-attribution{font-size:var(--text-xs);color:var(--color-text-muted);font-style:normal;}
+  .quote-block p{font-size:var(--text-sm);font-style:italic;color:var(--color-text);margin:0 0 var(--space-2);max-width:100%;}
+  .quote-source{font-size:var(--text-xs);color:var(--color-text-muted);font-weight:600;font-style:normal;}
 
-  .player-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-4) var(--space-5);margin-bottom:var(--space-3);box-shadow:var(--shadow-sm);}
-  .player-card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-2);}
-  .player-name{font-weight:600;font-size:var(--text-base);color:var(--color-text);}
-  .player-pos{font-size:var(--text-xs);color:var(--color-text-muted);}
-  .badge{display:inline-flex;align-items:center;gap:4px;font-size:var(--text-xs);font-weight:600;padding:2px var(--space-2);border-radius:var(--radius-full);}
+  .info-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:var(--space-3);box-shadow:var(--shadow-sm);}
+  .info-card-header{display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4);border-bottom:1px solid var(--color-divider);background:var(--color-surface-2);}
+  .info-card-name{font-weight:700;font-size:var(--text-base);}
+  .info-card-role{font-size:var(--text-xs);color:var(--color-text-muted);}
+  .info-card-body{padding:var(--space-4);}
+  .info-card-body p{font-size:var(--text-sm);color:var(--color-text);margin-bottom:var(--space-2);max-width:100%;}
+  .info-card-body p:last-child{margin-bottom:0;}
+  .badge{display:inline-flex;align-items:center;font-size:var(--text-xs);font-weight:600;padding:2px var(--space-2);border-radius:var(--radius-full);}
   .badge-red{background:var(--color-badge-red);color:var(--color-badge-red-text);}
   .badge-amber{background:var(--color-badge-amber);color:var(--color-badge-amber-text);}
   .badge-gray{background:var(--color-badge-gray);color:var(--color-badge-gray-text);}
 
-  .findings-table{width:100%;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--color-border);box-shadow:var(--shadow-sm);margin-top:var(--space-4);}
-  .findings-table thead tr{background:var(--color-surface-offset);}
-  .findings-table th{font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--color-text-muted);padding:var(--space-3) var(--space-4);text-align:left;}
-  .findings-table td{font-size:var(--text-sm);padding:var(--space-3) var(--space-4);border-top:1px solid var(--color-divider);color:var(--color-text);vertical-align:top;}
-  .findings-table tr:hover td{background:var(--color-surface-2);}
-  .td-factor{font-weight:600;color:var(--color-text);min-width:140px;}
-  .td-detail{color:var(--color-text-muted);}
-  .td-source{color:var(--color-text-faint);font-size:var(--text-xs);}
+  .data-table-wrap{overflow-x:auto;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);margin-bottom:var(--space-6);}
+  .data-table{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);overflow:hidden;font-size:var(--text-sm);}
+  .data-table thead tr{background:var(--color-surface-offset);border-bottom:1px solid var(--color-border);}
+  .data-table th{padding:var(--space-3) var(--space-4);text-align:left;font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--color-text-muted);}
+  .data-table td{padding:var(--space-3) var(--space-4);vertical-align:top;border-bottom:1px solid var(--color-divider);color:var(--color-text);line-height:1.5;}
+  .data-table tr:last-child td{border-bottom:none;}
+  .data-table td:first-child{font-weight:600;white-space:nowrap;}
+  .data-table tbody tr:nth-child(even) td{background:var(--color-surface-2);}
 
-  .timeline-item{display:flex;gap:var(--space-4);margin-bottom:var(--space-4);align-items:flex-start;}
-  .timeline-dot{width:8px;height:8px;border-radius:50%;background:var(--color-accent);margin-top:6px;flex-shrink:0;}
-  .timeline-content{flex:1;}
-  .timeline-label{font-size:var(--text-xs);font-weight:600;color:var(--color-primary);text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px;}
-  [data-theme="dark"] .timeline-label{color:var(--color-accent);}
-  .timeline-text{font-size:var(--text-sm);color:var(--color-text);}
+  .bullet-list{list-style:none;padding:0;}
+  .bullet-list li{display:flex;gap:var(--space-3);align-items:flex-start;padding:var(--space-2) 0;border-bottom:1px solid var(--color-divider);font-size:var(--text-sm);color:var(--color-text);}
+  .bullet-list li:last-child{border-bottom:none;}
+  .bullet-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--color-accent);flex-shrink:0;margin-top:.45em;}
 
-  .alert-box{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-4) var(--space-5);margin:var(--space-4) 0;display:flex;gap:var(--space-3);align-items:flex-start;box-shadow:var(--shadow-sm);}
-  .alert-icon{font-size:1.25rem;flex-shrink:0;margin-top:1px;}
-  .alert-content{flex:1;}
-  .alert-title{font-weight:600;font-size:var(--text-sm);color:var(--color-text);margin-bottom:var(--space-1);}
-  .alert-text{font-size:var(--text-sm);color:var(--color-text-muted);}
+  .alert{display:flex;gap:var(--space-3);background:var(--color-badge-amber);border:1px solid oklch(from var(--color-accent) l c h/.2);border-radius:var(--radius-lg);padding:var(--space-4);font-size:var(--text-sm);color:var(--color-badge-amber-text);margin-bottom:var(--space-6);}
+  [data-theme="dark"] .alert{background:#2a2010;color:#e0b864;}
+  .alert-icon{font-size:1.1em;flex-shrink:0;margin-top:.05em;}
 
-  .report-footer{max-width:var(--content-default);margin-inline:auto;padding:var(--space-8) var(--space-6) var(--space-6);border-top:1px solid var(--color-divider);margin-top:var(--space-10);}
-  .footer-meta{font-size:var(--text-xs);color:var(--color-text-faint);display:flex;gap:var(--space-4);flex-wrap:wrap;}
+  .conclusion-box{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-6);box-shadow:var(--shadow-md);}
+  .conclusion-box h3{font-family:var(--font-display);font-size:var(--text-lg);font-weight:400;margin-bottom:var(--space-3);}
+  .conclusion-box p{font-size:var(--text-sm);color:var(--color-text);margin-bottom:var(--space-3);max-width:100%;}
+  .conclusion-box p:last-child{margin-bottom:0;}
 
-  @media(max-width:640px){
-    .header-stats{grid-template-columns:repeat(3,1fr);}
-    .stat-pill{padding:var(--space-2) var(--space-2);}
-    .stat-pill-value{font-size:var(--text-lg);}
-    .stat-grid{grid-template-columns:1fr 1fr;}
-    .report-body{padding:var(--space-6) var(--space-4) 0;}
+  .report-footer{max-width:var(--content-default);margin-inline:auto;padding:var(--space-8) var(--space-6) var(--space-4);border-top:1px solid var(--color-divider);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--space-3);}
+  .footer-note{font-size:var(--text-xs);color:var(--color-text-faint);}
+
+  @media(max-width:480px){
     .report-header{padding:var(--space-6) var(--space-4);}
+    .header-stats{gap:var(--space-2);}
+    .stat-pill{padding:var(--space-2) var(--space-3);}
+    .stat-pill-value{font-size:var(--text-lg);}
+    .report-body{padding:var(--space-5) var(--space-4) 0;}
+    .stat-grid{grid-template-columns:1fr 1fr;}
+    .data-table th,.data-table td{padding:var(--space-2) var(--space-3);}
+    .report-footer{flex-direction:column;text-align:center;}
+    .toc-bar{padding:var(--space-2) var(--space-4);}
   }
 </style>
 </head>
@@ -177,15 +184,15 @@
 <header class="report-header">
   <div class="header-inner">
     <div class="header-meta">
-      <span class="org-tag">Phoenix Mercury · Internal Report</span>
-      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <span class="org-tag">Phoenix Mercury &middot; Internal Report</span>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
     </div>
     <h1 class="report-title">2026 Season Performance Analysis</h1>
-    <p class="report-subtitle">Prepared May 30, 2026 &nbsp;·&nbsp; Executive Review &nbsp;·&nbsp; Confidential</p>
+    <p class="report-subtitle">Prepared May 30, 2026 &nbsp;&middot;&nbsp; Executive Review &nbsp;&middot;&nbsp; Confidential</p>
     <div class="header-stats">
-      <div class="stat-pill"><div class="stat-pill-value">2–7</div><div class="stat-pill-label">Record</div></div>
+      <div class="stat-pill"><div class="stat-pill-value">2&ndash;7</div><div class="stat-pill-label">Record</div></div>
       <div class="stat-pill"><div class="stat-pill-value">#14</div><div class="stat-pill-label">ESPN Rank</div></div>
       <div class="stat-pill"><div class="stat-pill-value">109.1</div><div class="stat-pill-label">Def. Rating</div></div>
     </div>
@@ -205,282 +212,194 @@
 
 <main class="report-body">
 
-  <!-- Executive Summary -->
-  <div class="report-section" style="margin-top:var(--space-2);">
-    <div class="alert-box">
-      <span class="alert-icon">📋</span>
-      <div class="alert-content">
-        <div class="alert-title">Executive Summary</div>
-        <div class="alert-text">The Phoenix Mercury have opened the 2026 WNBA season 2–7, last in the Western Conference, after reaching the WNBA Finals in 2025. The decline is attributable to a convergence of pre-season roster losses, a defensive identity breakdown, recurring late-game execution failures, and structural questions around depth and systems.</div>
-      </div>
-    </div>
+  <div class="alert">
+    <span class="alert-icon">&#128203;</span>
+    <div><strong>Executive Summary:</strong> The Phoenix Mercury have opened the 2026 WNBA season 2&ndash;7, last in the Western Conference, after reaching the WNBA Finals in 2025. The decline is attributable to a convergence of pre-season roster losses, a defensive identity breakdown, recurring late-game execution failures, and structural questions around depth and systems.</div>
   </div>
 
-  <!-- Section 1 -->
   <section class="report-section" id="s1">
     <div class="section-header">
       <div class="section-num">1</div>
       <h2 class="section-title">On-Court Performance &amp; Metrics</h2>
     </div>
-
     <div class="subsection">
       <div class="subsection-title">Key Statistics</div>
       <div class="stat-grid">
-        <div class="stat-card">
-          <div class="stat-card-value">2–7</div>
-          <div class="stat-card-label">Season Record</div>
-          <div class="stat-card-sub">Last in Western Conference</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card-value">109.1</div>
-          <div class="stat-card-label">Defensive Rating</div>
-          <div class="stat-card-sub">Ranked 10th; was 102.5 (5th) in 2025</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card-value">37.3%</div>
-          <div class="stat-card-label">Opp. 3PT% Allowed</div>
-          <div class="stat-card-sub">2nd-worst rate in the WNBA</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card-value">#14</div>
-          <div class="stat-card-label">ESPN Power Ranking</div>
-          <div class="stat-card-sub">Entered season ranked 4th</div>
-        </div>
+        <div class="stat-card"><div class="stat-card-value">2&ndash;7</div><div class="stat-card-label">Season Record</div><div class="stat-card-sub">Last in Western Conference</div></div>
+        <div class="stat-card"><div class="stat-card-value">109.1</div><div class="stat-card-label">Defensive Rating</div><div class="stat-card-sub">Ranked 10th; was 102.5 (5th) in 2025</div></div>
+        <div class="stat-card"><div class="stat-card-value">37.3%</div><div class="stat-card-label">Opp. 3PT% Allowed</div><div class="stat-card-sub">2nd-worst rate in the WNBA</div></div>
+        <div class="stat-card"><div class="stat-card-value">#14</div><div class="stat-card-label">ESPN Power Ranking</div><div class="stat-card-sub">Entered season ranked 4th</div></div>
       </div>
     </div>
-
     <div class="subsection">
       <div class="subsection-title">Defensive Breakdown</div>
-      <div class="prose">
-        <p>Defense was the foundation of Phoenix's 2025 Finals run. That identity has not carried into 2026. The team is surrendering 95+ points per game in over half their contests — a threshold crossed only four times across all 44 games of the 2025 regular season. Opponents are shooting 37.3% from three-point range against Phoenix, the second-worst rate allowed in the league.</p>
-      </div>
+      <div class="prose"><p>Defense was the foundation of Phoenix's 2025 Finals run. That identity has not carried into 2026. The team is surrendering 95+ points per game in over half their contests &mdash; a threshold crossed only four times across all 44 games of the 2025 regular season. Opponents are shooting 37.3% from three-point range against Phoenix, the second-worst rate allowed in the league.</p></div>
     </div>
-
     <div class="subsection">
       <div class="subsection-title">Late-Game Execution Failures</div>
-      <div class="prose">
-        <p>A recurring pattern of fourth-quarter collapses has defined the 2026 season. The Mercury surrendered a 23-0 run to the New York Liberty over the final five minutes of a May 27 game. Phoenix also blew an 8-point fourth-quarter lead against the Atlanta Dream in an earlier contest.</p>
-      </div>
-      <div class="quote-block">
-        <blockquote>"I let our team down."</blockquote>
-        <div class="quote-attribution">— Nate Tibbetts, Head Coach, following May 27 loss to NY Liberty</div>
-      </div>
+      <div class="prose"><p>A recurring pattern of fourth-quarter collapses has defined the 2026 season. The Mercury surrendered a 23-0 run to the New York Liberty over the final five minutes of a May 27 game. Phoenix also blew an 8-point fourth-quarter lead against the Atlanta Dream in an earlier contest. Head Coach Nate Tibbetts publicly accepted personal responsibility for in-game decisions that contributed to the Liberty collapse.</p></div>
+      <div class="quote-block"><p>&ldquo;I let our team down.&rdquo;</p><span class="quote-source">&mdash; Nate Tibbetts, Head Coach, following May 27 loss to NY Liberty</span></div>
     </div>
   </section>
 
-  <!-- Section 2 -->
   <section class="report-section" id="s2">
     <div class="section-header">
       <div class="section-num">2</div>
       <h2 class="section-title">Roster Losses &amp; Personnel Disruptions</h2>
     </div>
-
     <div class="subsection">
       <div class="subsection-title">Pre-Season Injuries</div>
-      <div class="player-card">
-        <div class="player-card-header">
-          <div>
-            <div class="player-name">Kathryn Westbeld</div>
-            <div class="player-pos">Forward</div>
-          </div>
-          <span class="badge badge-red">Season-Ending</span>
-        </div>
-        <div class="prose"><p>Westbeld tore her right ACL while playing overseas in Hungary during the offseason and will miss the entire 2026 WNBA season. She was a critical rotation player during Phoenix's 2025 Finals run, providing frontcourt depth and versatility that has not been replaced in the current roster.</p></div>
+      <div class="info-card">
+        <div class="info-card-header"><div><div class="info-card-name">Kathryn Westbeld &nbsp;<span class="badge badge-red">Season-Ending</span></div><div class="info-card-role">Forward</div></div></div>
+        <div class="info-card-body"><p>Westbeld tore her right ACL while playing overseas in Hungary during the offseason and will miss the entire 2026 WNBA season. She was a critical rotation player during Phoenix's 2025 Finals run, providing frontcourt depth and versatility that has not been replaced in the current roster.</p></div>
       </div>
-      <div class="player-card">
-        <div class="player-card-header">
-          <div>
-            <div class="player-name">Sami Whitcomb</div>
-            <div class="player-pos">Guard</div>
-          </div>
-          <span class="badge badge-amber">4–6 Weeks</span>
-        </div>
-        <div class="prose"><p>Whitcomb required arthroscopic surgery to remove a loose body from her left knee before the season began, missing the first four to six weeks. Whitcomb shot 36.1% from three-point range in 2025, and her absence left the team without a reliable perimeter shooter at the outset of the season — a gap opponents have exploited consistently.</p></div>
+      <div class="info-card">
+        <div class="info-card-header"><div><div class="info-card-name">Sami Whitcomb &nbsp;<span class="badge badge-amber">4&ndash;6 Weeks</span></div><div class="info-card-role">Guard</div></div></div>
+        <div class="info-card-body"><p>Whitcomb required arthroscopic surgery to remove a loose body from her left knee before the season began, missing the first four to six weeks. Whitcomb shot 36.1% from three-point range in 2025, and her absence left the team without a reliable perimeter shooter at the outset of the season &mdash; a gap opponents have exploited consistently.</p></div>
       </div>
     </div>
-
     <div class="subsection">
-      <div class="subsection-title">Satou Sabally — Free Agency Departure</div>
+      <div class="subsection-title">Satou Sabally &mdash; Free Agency Departure</div>
       <div class="prose">
-        <p>Sabally was part of Phoenix's core trio alongside Kahleah Copper and Alyssa Thomas in 2025, averaging 16.3 points per game before suffering a concussion in Game 3 of the WNBA Finals. The Mercury organization elected not to extend a "core designation" — the maximum-value retention mechanism available — leaving her as an unrestricted free agent. Sabally signed a two-year, $1.67 million deal with the New York Liberty.</p>
+        <p>Sabally was part of Phoenix's core trio alongside Kahleah Copper and Alyssa Thomas in 2025, averaging 16.3 points per game before suffering a concussion in Game 3 of the WNBA Finals. The Mercury organization elected not to extend a &ldquo;core designation&rdquo; &mdash; the maximum-value retention mechanism available &mdash; leaving her as an unrestricted free agent. Sabally signed a two-year, $1.67 million deal with the New York Liberty.</p>
         <p>The production and floor-spacing Sabally provided has not been replaced in the 2026 roster construction. Her departure represents a net loss of 16+ points per game from a versatile, All-Star-caliber player in the prime of her career (age 26).</p>
       </div>
-      <div class="quote-block">
-        <blockquote>"I think that is an environment that really encourages me and believes in me. So I think that was just something I had to do for my own protection."</blockquote>
-        <div class="quote-attribution">— Satou Sabally, on her decision to leave Phoenix (May 2026)</div>
-      </div>
-      <div class="prose"><p>Multiple credentialed reporters covering the WNBA noted the phrasing was deliberate and "left room for interpretation," indicating the free agency process involved meaningful tension between the player and the organization.</p></div>
+      <div class="quote-block"><p>&ldquo;I think that is an environment that really encourages me and believes in me. So I think that was just something I had to do for my own protection.&rdquo;</p><span class="quote-source">&mdash; Satou Sabally, on her decision to leave Phoenix (May 2026)</span></div>
+      <div class="prose"><p>Multiple credentialed reporters covering the WNBA noted the phrasing was deliberate and &ldquo;left room for interpretation,&rdquo; indicating the free agency process involved meaningful tension between the player and the organization.</p></div>
     </div>
-
     <div class="subsection">
       <div class="subsection-title">Roster Depth</div>
-      <div class="prose">
-        <p>With Westbeld lost for the season and Whitcomb unavailable to start, the Mercury filled roster spots via the waiver wire. Forwards Peyton Williams and Anneli Maley were claimed off waivers in the days before the season opener. Phoenix entered 2026 with what was documented as the smallest active roster in the league at the time of final roster construction.</p>
-      </div>
+      <div class="prose"><p>With Westbeld lost for the season and Whitcomb unavailable to start, the Mercury filled roster spots via the waiver wire. Forwards Peyton Williams and Anneli Maley were claimed off waivers in the days before the season opener. Phoenix entered 2026 with what was documented as the smallest active roster in the league at the time of final roster construction.</p></div>
     </div>
   </section>
 
-  <!-- Section 3 -->
   <section class="report-section" id="s3">
     <div class="section-header">
       <div class="section-num">3</div>
       <h2 class="section-title">Coaching &amp; Systems</h2>
     </div>
-
     <div class="subsection">
-      <div class="subsection-title">Nate Tibbetts — Head Coach (Year 3)</div>
+      <div class="subsection-title">Nate Tibbetts &mdash; Head Coach (Year 3)</div>
       <div class="prose">
         <p>Tibbetts joined the organization in October 2023 with nearly two decades of NBA assistant coaching experience, most recently with the Orlando Magic, but without prior experience coaching in the WNBA. His hire drew scrutiny regarding his unfamiliarity with the women's game; the organization defended the process as thorough and inclusive of diverse candidates.</p>
-        <p>Midway through the 2026 season, Tibbetts publicly acknowledged the team had not yet established its identity — a notable admission entering a third year with the same core players.</p>
+        <p>Midway through the 2026 season, Tibbetts publicly acknowledged the team had not yet established its identity &mdash; a notable admission entering a third year with the same core players.</p>
       </div>
-      <div class="quote-block">
-        <blockquote>"I think it's just want-to and attention to detail. We didn't have it tonight. We didn't get matched up right, lack of focus — we looked like a poor defensive team tonight."</blockquote>
-        <div class="quote-attribution">— Nate Tibbetts, post-game statement, 2026</div>
-      </div>
+      <div class="quote-block"><p>&ldquo;I think it's just want-to and attention to detail. We didn't have it tonight. We didn't get matched up right, lack of focus &mdash; we looked like a poor defensive team tonight.&rdquo;</p><span class="quote-source">&mdash; Nate Tibbetts, post-game statement, 2026</span></div>
     </div>
-
     <div class="subsection">
       <div class="subsection-title">Player Leadership &amp; Accountability Statements</div>
-      <div class="quote-block">
-        <blockquote>"I think we are nowhere near where we need to be defensively. It is going to be a long season if we don't get it together on the defensive end. It shows that if you want to play on this team, you have to defend."</blockquote>
-        <div class="quote-attribution">— Alyssa Thomas, following May 18 loss to Toronto</div>
-      </div>
+      <div class="quote-block"><p>&ldquo;I think we are nowhere near where we need to be defensively. It is going to be a long season if we don't get it together on the defensive end. It shows that if you want to play on this team, you have to defend.&rdquo;</p><span class="quote-source">&mdash; Alyssa Thomas, following May 18 loss to Toronto</span></div>
     </div>
-
     <div class="subsection">
       <div class="subsection-title">Veteran Rotation &amp; Playing Time</div>
-      <div class="prose">
-        <p>DeWanna Bonner, a veteran forward who held a rotation role in 2025, has been moved to the bench in 2026 and is averaging 3.0 points and 4.0 rebounds while shooting 25.0% from the field in recent outings. Questions around whether the veteran rotation is optimally configured for the team's current competitive needs have been raised by analysts covering the team.</p>
-      </div>
+      <div class="prose"><p>DeWanna Bonner, a veteran forward who held a rotation role in 2025, has been moved to the bench in 2026 and is averaging 3.0 points and 4.0 rebounds while shooting 25.0% from the field in recent outings. Questions around whether the veteran rotation is optimally configured for the team's current competitive needs have been raised by analysts covering the team.</p></div>
     </div>
   </section>
 
-  <!-- Section 4 -->
   <section class="report-section" id="s4">
     <div class="section-header">
       <div class="section-num">4</div>
       <h2 class="section-title">External &amp; Structural Factors</h2>
     </div>
-
     <div class="subsection">
-      <div class="subsection-title">WNBA Physicality Enforcement — 2026 Rule Changes</div>
+      <div class="subsection-title">WNBA Physicality Enforcement &mdash; 2026 Rule Changes</div>
       <div class="prose">
-        <p>The WNBA implemented stricter officiating standards beginning with the 2026 season, cracking down on physical play and freedom-of-movement violations following the formation of a dedicated officiating task force in the offseason. Early-season data showed foul calls rising to approximately 44.6 per game — a significant increase from prior years.</p>
+        <p>The WNBA implemented stricter officiating standards beginning with the 2026 season, cracking down on physical play and freedom-of-movement violations following the formation of a dedicated officiating task force in the offseason. Early-season data showed foul calls rising to approximately 44.6 per game &mdash; a significant increase from prior years.</p>
         <p>This change disproportionately affects Phoenix. The Mercury built their organizational identity around physical, aggressive half-court defense; under the new enforcement standards, that style is more frequently penalized. Alyssa Thomas, whose offensive game relies heavily on physical contact creation, has also been affected on that side of the ball.</p>
       </div>
     </div>
-
     <div class="subsection">
       <div class="subsection-title">Increased Western Conference Competition</div>
-      <div class="prose">
-        <p>The 2026 WNBA field is broadly regarded as deeper and more competitive than prior seasons, with multiple teams projected to contend for fewer than eight available playoff spots. The competitive environment provides less margin for the inconsistency Phoenix has exhibited in the early going.</p>
-      </div>
+      <div class="prose"><p>The 2026 WNBA field is broadly regarded as deeper and more competitive than prior seasons, with multiple teams projected to contend for fewer than eight available playoff spots. The competitive environment provides less margin for the inconsistency Phoenix has exhibited in the early going.</p></div>
     </div>
   </section>
 
-  <!-- Section 5 -->
   <section class="report-section" id="s5">
     <div class="section-header">
       <div class="section-num">5</div>
-      <h2 class="section-title">Organizational Background — Legal Record</h2>
+      <h2 class="section-title">Organizational Background &mdash; Legal Record</h2>
     </div>
-
     <div class="subsection">
-      <div class="subsection-title">Federal Discrimination Lawsuit — Nikki Blue (2025)</div>
-      <div class="player-card">
-        <div class="player-card-header">
-          <div>
-            <div class="player-name">Nikki Blue v. Phoenix Mercury</div>
-            <div class="player-pos">Filed July 2025 · U.S. District Court, District of Arizona</div>
-          </div>
-          <span class="badge badge-amber">Federal — Pending</span>
+      <div class="subsection-title">Federal Discrimination Lawsuit &mdash; Nikki Blue (2025)</div>
+      <div class="info-card">
+        <div class="info-card-header"><div><div class="info-card-name">Nikki Blue v. Phoenix Mercury &nbsp;<span class="badge badge-gray">Federal &mdash; Pending</span></div><div class="info-card-role">Filed July 2025 &middot; U.S. District Court, District of Arizona</div></div></div>
+        <div class="info-card-body">
+          <p>Former Mercury assistant and interim head coach Nikki Blue filed a federal lawsuit alleging racial and gender discrimination, unequal pay, and a &ldquo;longstanding toxic culture&rdquo; within the organization.</p>
+          <p><strong>Documented allegations in the complaint:</strong></p>
+          <ul class="bullet-list" style="margin-top:var(--space-2);">
+            <li>Passed over for the head coaching role in favor of Nate Tibbetts, who was reportedly paid approximately four times her salary.</li>
+            <li>Pressured by management to facilitate the trade of a pregnant player, alleged to be inconsistent with league guidelines.</li>
+            <li>Deliberately excluded from team events and denied access to organizational resources required to perform her role.</li>
+            <li>Alleged use of racially coded characterizations by team management to undermine her standing internally.</li>
+          </ul>
+          <p style="margin-top:var(--space-3);color:var(--color-text-muted);font-size:var(--text-xs);">The matter has not been publicly adjudicated as of the date of this report. All allegations are those of the plaintiff.</p>
         </div>
-        <div class="prose"><p>Former Mercury assistant and interim head coach Nikki Blue filed a federal lawsuit alleging racial and gender discrimination, unequal pay, and a "longstanding toxic culture" within the organization.</p></div>
       </div>
-      <div class="prose"><p><strong>Documented allegations in the complaint:</strong></p></div>
-      <div style="margin-top:var(--space-3)">
-        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-label">Coaching Role</div><div class="timeline-text">Passed over for the head coaching role in favor of Nate Tibbetts, who was reportedly paid approximately four times her salary.</div></div></div>
-        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-label">Player Trade Pressure</div><div class="timeline-text">Pressured by management to facilitate the trade of a pregnant player, alleged to be inconsistent with league guidelines.</div></div></div>
-        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-label">Resource Access</div><div class="timeline-text">Deliberately excluded from team events and denied access to organizational resources required to perform her role.</div></div></div>
-        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-label">Internal Characterization</div><div class="timeline-text">Alleged use of racially coded characterizations by team management to undermine her standing internally.</div></div></div>
-      </div>
-      <div class="prose" style="margin-top:var(--space-3)"><p>The matter has not been publicly adjudicated as of the date of this report.</p></div>
     </div>
-
     <div class="subsection">
       <div class="subsection-title">Broader Organizational Litigation Context</div>
-      <div class="prose">
-        <p>The Suns/Mercury organizational umbrella faced four federal lawsuits within a seven-month period in 2024–2025, all involving allegations of workplace discrimination, retaliation, or harassment. While the Mercury's basketball operations and player personnel may not be directly impacted by these cases, the cumulative pattern of litigation reflects an organizational environment that has been under legal scrutiny.</p>
-      </div>
+      <div class="prose"><p>The Suns/Mercury organizational umbrella faced four federal lawsuits within a seven-month period in 2024&ndash;2025, all involving allegations of workplace discrimination, retaliation, or harassment. The cumulative pattern of litigation reflects an organizational environment that has been under sustained legal scrutiny, independent of the individual merits of each case.</p></div>
     </div>
   </section>
 
-  <!-- Section 6 -->
   <section class="report-section" id="s6">
     <div class="section-header">
       <div class="section-num">6</div>
       <h2 class="section-title">Summary of Contributing Factors</h2>
     </div>
-
-    <table class="findings-table">
-      <thead>
-        <tr>
-          <th>Factor</th>
-          <th>Specifics</th>
-          <th>Source</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td class="td-factor">Record</td><td class="td-detail">2–7, last in Western Conference</td><td class="td-source">Wikipedia / Standings</td></tr>
-        <tr><td class="td-factor">Key Injuries</td><td class="td-detail">Westbeld (ACL, season-ending); Whitcomb (knee, 4–6 wks)</td><td class="td-source">AZCentral / USA Today</td></tr>
-        <tr><td class="td-factor">Free Agency Loss</td><td class="td-detail">Sabally departed; signed NY Liberty for $1.67M/2 yrs</td><td class="td-source">NYTimes / SI</td></tr>
-        <tr><td class="td-factor">Defensive Rating</td><td class="td-detail">109.1 (10th in WNBA); was 102.5 (5th) in 2025</td><td class="td-source">BurnCitySports</td></tr>
-        <tr><td class="td-factor">3PT Defense</td><td class="td-detail">Opponents shooting 37.3% from 3 — 2nd worst allowed rate</td><td class="td-source">TheIXSports</td></tr>
-        <tr><td class="td-factor">Late-Game Execution</td><td class="td-detail">23-0 collapse vs. Liberty; 4th-quarter collapses recurring</td><td class="td-source">Yahoo Sports</td></tr>
-        <tr><td class="td-factor">Roster Depth</td><td class="td-detail">Smallest roster in league entering the season</td><td class="td-source">Reddit / Team Reports</td></tr>
-        <tr><td class="td-factor">WNBA Rule Changes</td><td class="td-detail">Stricter physicality enforcement; fouls up to 44.6/game</td><td class="td-source">Fox Sports</td></tr>
-        <tr><td class="td-factor">Identity Gap</td><td class="td-detail">Coach stated team identity not yet established in Year 3</td><td class="td-source">BurnCitySports</td></tr>
-        <tr><td class="td-factor">Bench Production</td><td class="td-detail">Bonner averaging 3.0 PPG / 25% FG off bench</td><td class="td-source">RotoWire</td></tr>
-        <tr><td class="td-factor">Legal/Organizational</td><td class="td-detail">Federal discrimination suit from former assistant coach (pending)</td><td class="td-source">Bloomberg Law</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- Conclusion -->
-  <section class="report-section">
-    <div class="prose">
-      <p>The Phoenix Mercury's 2026 season difficulties reflect a convergence of factors rather than a single isolated issue. The organization entered 2026 having lost a key All-Star (Sabally) without a direct replacement, two meaningful rotation players (Westbeld, Whitcomb) to pre-season injury, and with a coaching staff still navigating the installation of a consistent identity into its third year. These roster and systems challenges were compounded by a league-wide rules change that specifically disadvantaged a team built around physical defense.</p>
-      <p>At the leadership level, player statements indicate the defensive problems are acknowledged internally. Coaching staff accountability has been expressed publicly. However, recurring fourth-quarter collapses and an inability to generate consistent defensive stops suggest the issues are not yet resolved operationally.</p>
-      <p>The organizational backdrop — including a pending federal discrimination lawsuit from a former assistant coach alleging systemic cultural issues — adds an additional layer of context for any executive-level evaluation of the Mercury's current trajectory.</p>
+    <div class="data-table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Factor</th><th>Detail</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Season Record</td><td>2&ndash;7, last in Western Conference</td><td><span class="badge badge-red">Critical</span></td></tr>
+          <tr><td>Defensive Rating</td><td>109.1 (10th in WNBA); was 102.5 (5th) in 2025</td><td><span class="badge badge-red">Critical</span></td></tr>
+          <tr><td>3PT Defense Allowed</td><td>Opponents shooting 37.3% &mdash; 2nd worst in league</td><td><span class="badge badge-red">Critical</span></td></tr>
+          <tr><td>Kathryn Westbeld</td><td>Torn ACL (overseas) &mdash; out for entire 2026 season</td><td><span class="badge badge-red">Season-Ending</span></td></tr>
+          <tr><td>Sami Whitcomb</td><td>Knee surgery &mdash; missed first 4&ndash;6 weeks of season</td><td><span class="badge badge-amber">Returning</span></td></tr>
+          <tr><td>Satou Sabally</td><td>Not core-designated; signed with NY Liberty ($1.67M / 2yr)</td><td><span class="badge badge-red">Departed</span></td></tr>
+          <tr><td>Late-Game Execution</td><td>23-0 collapse vs. Liberty; recurring 4Q failures</td><td><span class="badge badge-red">Ongoing</span></td></tr>
+          <tr><td>Roster Depth</td><td>Smallest roster in league entering the season</td><td><span class="badge badge-amber">Concern</span></td></tr>
+          <tr><td>Team Identity</td><td>Coach acknowledged identity not established in Year 3</td><td><span class="badge badge-amber">Concern</span></td></tr>
+          <tr><td>WNBA Rule Changes</td><td>Stricter physicality enforcement; ~44.6 fouls/game leaguewide</td><td><span class="badge badge-amber">External</span></td></tr>
+          <tr><td>Bench Production</td><td>Bonner: 3.0 PPG / 25.0% FG in recent games off bench</td><td><span class="badge badge-amber">Concern</span></td></tr>
+          <tr><td>Federal Lawsuit</td><td>Discrimination suit from former asst. coach Nikki Blue; pending</td><td><span class="badge badge-gray">Pending</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="conclusion-box">
+      <h3>Conclusion</h3>
+      <p>The Phoenix Mercury's 2026 season difficulties reflect a convergence of factors rather than a single isolated cause. The organization entered the season having lost a key All-Star without a direct replacement, two meaningful rotation players to pre-season injury, and with a coaching staff still navigating the installation of a consistent system into its third year with the same core group.</p>
+      <p>These roster and systems challenges were compounded by a league-wide rules change that specifically disadvantaged a team built around physical defense &mdash; an organizational identity that has not yet been successfully transitioned to a new style of play.</p>
+      <p>Player and coaching staff statements indicate the defensive problems are acknowledged internally. However, recurring fourth-quarter collapses through nine games suggest the issues are not yet resolved operationally. The organizational backdrop &mdash; including a pending federal discrimination lawsuit from a former assistant coach &mdash; adds additional context for any executive-level evaluation of the Mercury's current trajectory and internal culture.</p>
     </div>
   </section>
 
 </main>
 
 <footer class="report-footer">
-  <div class="footer-meta">
-    <span>Prepared: May 30, 2026</span>
-    <span>Classification: Internal — Executive Review</span>
-    <span>Subject: Phoenix Mercury 2026 Season Underperformance Analysis</span>
-  </div>
+  <span class="footer-note">Phoenix Mercury &middot; 2026 Season Analysis &middot; May 30, 2026</span>
+  <span class="footer-note">Internal use only &middot; Not for external distribution</span>
 </footer>
 
 <script>
 (function(){
-  var t=document.querySelector('[data-theme-toggle]'),r=document.documentElement;
-  var d=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
-  r.setAttribute('data-theme',d);
-  if(t){
-    t.innerHTML=d==='dark'?'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>':'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-    t.addEventListener('click',function(){
-      d=d==='dark'?'light':'dark';
-      r.setAttribute('data-theme',d);
-      t.innerHTML=d==='dark'?'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>':'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var toggle=document.querySelector('[data-theme-toggle]');
+  var root=document.documentElement;
+  var theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+  root.setAttribute('data-theme',theme);
+  var sun='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+  var moon='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  if(toggle){
+    toggle.innerHTML=theme==='dark'?sun:moon;
+    toggle.addEventListener('click',function(){
+      theme=theme==='dark'?'light':'dark';
+      root.setAttribute('data-theme',theme);
+      toggle.innerHTML=theme==='dark'?sun:moon;
     });
   }
+  var sections=document.querySelectorAll('[id^="s"]');
+  var links=document.querySelectorAll('.toc-link');
   if('IntersectionObserver' in window){
-    var links=document.querySelectorAll('.toc-link');
-    var sections=document.querySelectorAll('.report-section[id]');
     var obs=new IntersectionObserver(function(entries){
       entries.forEach(function(e){
         if(e.isIntersecting){
@@ -489,7 +408,7 @@
           if(a)a.classList.add('active');
         }
       });
-    },{rootMargin:'-65% 0px'});
+    },{rootMargin:'-25% 0px -65% 0px'});
     sections.forEach(function(s){obs.observe(s);});
   }
 })();
